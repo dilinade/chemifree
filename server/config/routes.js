@@ -2,7 +2,7 @@ module.exports = function(app) {
   	var users = require('../controllers/users.js');
   	var products = require('../controllers/products.js');
   	var orders = require('../controllers/orders.js');
-
+    //var logins = require('../controllers/logins.js');
 
 
 	app
