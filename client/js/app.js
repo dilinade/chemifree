@@ -40,6 +40,17 @@ app.config(function($routeProvider){
 		controllerAs: 'orderCtrl',
 		templateUrl: '/partials/order.partial.html'
 	})
+        .when('/login', {
+
+            templateUrl: '/partials/login.partial.html'
+        })
 	
 	.otherwise('/')
-})
+});
+
+app.controller('loginCtrl',function($scope){
+    $scope.submit = function () {
+
+        
+    };
+});
