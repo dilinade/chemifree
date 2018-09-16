@@ -23,13 +23,18 @@ Product: <select name ="newOrder.product_name" ng-model="newOrder.product_id">
 </form><br>
 <!-- end of add new order -->
 
-
+<script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script>
+    function sweetalertclick1(){
+        swal("Canceled!", "", "success");
+    }
+</script>
 
 <!-- show all orders -->
 
 <!-- {{ordersCtrl.orders}} -->
 <p class="pull-left">Filter Orders: <input type="text" ng-model="ordersCtrl.orders.order_filter" placeholder="filter..."></p><br>
-<table class = "table">
+<table class = "table; bg-success" style="width: 900px">
 
     <thead>
         <tr>
@@ -45,7 +50,7 @@ Product: <select name ="newOrder.product_name" ng-model="newOrder.product_id">
         <td><span ng-bind="order._product_id.product_name"></span></td>
         <td><span ng-bind="order.quantity"></span></td>
         <td><span ng-bind="order.created_at | date: 'MMMM d yyyy'"></span></td>
-        <td><button class="btn btn-danger" role="button"ng-click="ordersCtrl.remove(order)">Cancel Order</button></td>
+        <td><button onclick="sweetalertclick1()" class="btn btn-danger" role="button"ng-click="ordersCtrl.remove(order)">Cancel Order</button></td>
         </tr>
     </tbody>
 </table>
