@@ -2,7 +2,10 @@ module.exports = function(app) {
   	var users = require('../controllers/users.js');
   	var products = require('../controllers/products.js');
   	var orders = require('../controllers/orders.js');
+<<<<<<<<< Temporary merge branch 1
+=========
 
+>>>>>>>>> Temporary merge branch 2
 
 
 	app
@@ -10,7 +13,6 @@ module.exports = function(app) {
 	// - - - User - - -
     // Index
 	.get('/users', function(request, response) { users.index(request, response) })
-       // .get('/login', function(request, response) { logins.show(request, response) })
 	// New
 	.get('/users/new', function(request, response) { users.create(request, response) })
 	// Show
