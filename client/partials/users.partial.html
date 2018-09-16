@@ -23,9 +23,9 @@
         <tr ng-repeat="user in usersCtrl.users | filter:usersCtrl.users.user_filter">
         <td><span ng-bind="user.first_name"></span></td>
         <td><span ng-bind="user.created_at | date: 'MMMM d yyyy'"></span></td>
-        <td><button class="btn btn-info" role="button" ng-click="usersCtrl.show(user)"><span class="glyphicon glyphicon-pencil"></span></button></td>
+        <td><button class="btn btn-info" role="button" ng-click="usersCtrl.show(user)" id="myBtn"><span class="glyphicon glyphicon-pencil"></span></button></td>
         <td><button class="btn btn-danger" role="button"ng-click="usersCtrl.remove(user)"><span class="glyphicon glyphicon-trash"></span></button></td>
         </tr>
     </tbody>
 </table>
-<div>
+</div>
