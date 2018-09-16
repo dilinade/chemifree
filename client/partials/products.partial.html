@@ -23,7 +23,7 @@
         <p> Image (url): </p>
         <p> <input placeholder ="http://"ng-model="productsCtrl.newProduct.img_url" require></p>
         <p> Description: </p>
-        <p> <textarea ng-model="productsCtrl.newProduct.description" require></textarea></p>
+        <p> <textarea ng-model="productsCtrl.newProduct.description" maxlength="50" require></textarea></p>
         <p> Initial Quantity: </p>
         <p> <input type = "number" ng-model="productsCtrl.newProduct.quantity" require></p>
         <button class="btn btn-success" role="button" ng-click="productsCtrl.add(productsCtrl.newProduct)">Add Product</button>
