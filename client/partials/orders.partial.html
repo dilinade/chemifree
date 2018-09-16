@@ -8,17 +8,17 @@
 <!-- add new order -->
 <br>
 <form>
-Customer: <select name ="newOrder.first_name" ng-model="newOrder.user_id" required>
-	<option value ='{{user._id}}'ng-repeat="user in ordersCtrl.users" >
+Customer: <select name ="newOrder.first_name" ng-model="newOrder.user_id">
+	<option value ='{{user._id}}'ng-repeat="user in ordersCtrl.users">
 		{{user.first_name}}
 	</option>
 	</select>
-Product: <select name ="newOrder.product_name" ng-model="newOrder.product_id" required>
+Product: <select name ="newOrder.product_name" ng-model="newOrder.product_id">
 		<option value = '{{product._id}}' ng-repeat="product in ordersCtrl.products">{{product.product_name}}
 		</option>
 	</select>
 
-	<input type="number" value="0" ng-model="newOrder.quantity" required>
+	<input type="number" placeholder="quantity" ng-model="newOrder.quantity">
 	<button class="btn btn-success" role="button" ng-click="ordersCtrl.add(newOrder)" type="submit">Order</button>
 </form><br>
 <!-- end of add new order -->
