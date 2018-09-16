@@ -1,34 +1,23 @@
+<button onclick="sweetalertclick()" class="btn"><i class="fa fa-home"></i></button>
+<!--<div class="col-md-4">
+<h4>Add a new Product</h4>
+	<p> Name:</p>
+	<p> <input placeholder ="name..."ng-model="productsCtrl.newProduct.product_name" required></p>
+	<p> Image (url): </p>
+	<p> <input placeholder ="http://"ng-model="productsCtrl.newProduct.img_url" required></p>
+	<p> Description: </p>
+	<p> <textarea ng-model="productsCtrl.newProduct.description" required></textarea></p>
+	<p> Initial Quantity: </p>
+	<p> <input type = "number" ng-model="productsCtrl.newProduct.quantity" required></p>
+	<button class="btn btn-success" role="button" ng-click="productsCtrl.add(productsCtrl.newProduct)">Add Product</button>
+</div>-->
 
+<script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script>
+    function sweetalertclick(){
 
-<!-- <div class="col-md-8">
-	<li ng-repeat="product in productsCtrl.products">
-		<a><span ng-bind="product.product_name" ng-click="productsCtrl.show(product)"></span></a>
-		<button class="btn btn-primary" role="button" ng-click="productsCtrl.remove(product)">Remove Product</button>
-	</li>
-</div> -->
-<br>
-<br>
-<br>
-<button class="btn btn-danger" role="button" id="myBtn"><span class="glyphicon glyphicon-plus"></button>
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <p><div class="col-md-4">
-            <h4>New Product</h4>
-        <p> Name:</p>
-        <p> <input placeholder ="name..."ng-model="productsCtrl.newProduct.product_name" require></p>
-        <p> Image (url): </p>
-        <p> <input placeholder ="http://"ng-model="productsCtrl.newProduct.img_url" require></p>
-        <p> Description: </p>
-        <p> <textarea ng-model="productsCtrl.newProduct.description" maxlength="50" require></textarea></p>
-        <p> Initial Quantity: </p>
-        <p> <input type = "number" ng-model="productsCtrl.newProduct.quantity" require></p>
-        <button class="btn btn-success" role="button" ng-click="productsCtrl.add(productsCtrl.newProduct)">Add Product</button>
-    </div></p>
-    </div>
+    }
+</script>
 
 </div>
 <!-- Test-->
@@ -71,8 +60,8 @@
         <h3 ng-bind="product.product_name"></h3>
         <p ng-bind = "product.description"></p>
         <p>Quantity Remaining: <span ng-bind="product.quantity"></span></p>
-        <button ng-click="productsCtrl.show(product)"class="btn btn-info" role="button"><span class="glyphicon glyphicon-pencil"></span></button>
-        <button class="btn btn-danger" role="button" ng-click="productsCtrl.remove(product)"><span class="glyphicon glyphicon-trash"></span></button>
+        <button ng-click="productsCtrl.show(product)"class="btn btn-info" role="button">Edit</button>
+        <button onclick="sweetalertclick()" class="btn btn-danger" role="button" ng-click="productsCtrl.remove(product)">Remove Product</button>
       </div>
     </div>
   </div>
