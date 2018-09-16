@@ -1,5 +1,5 @@
 <button onclick="sweetalertclick()" class="btn"><i class="fa fa-home"></i></button>
-<!--<div class="col-md-4">
+<div class="col-md-4">
 <h4>Add a new Product</h4>
 	<p> Name:</p>
 	<p> <input placeholder ="name..."ng-model="productsCtrl.newProduct.product_name" required></p>
@@ -10,27 +10,12 @@
 	<p> Initial Quantity: </p>
 	<p> <input type = "number" ng-model="productsCtrl.newProduct.quantity" required></p>
 	<button class="btn btn-success" role="button" ng-click="productsCtrl.add(productsCtrl.newProduct)">Add Product</button>
-</div>-->
+</div>
 
 <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 <script>
     function sweetalertclick(){
-        swal({
-            title: "Are you sure?",
-            text: "Once deleted, you will not be able to recover this imaginary file!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
-            .then((willDelete) => {
-            if (willDelete) {
-                swal("Poof! Your imaginary file has been deleted!", {
-                    icon: "success",
-                });
-            } else {
-                swal("Your imaginary file is safe!");
-    }
-    });
+        swal("Delete Successfull!", "", "success");
     }
 </script>
 
