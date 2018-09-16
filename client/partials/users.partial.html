@@ -1,7 +1,7 @@
 <br>
 <div class="col-md-8">
 <input ng-model="usersCtrl.newUser.first_name" require>
-<button class="btn btn-success" role="button" ng-click="usersCtrl.add(usersCtrl.newUser)">Add User</button>
+<button class="btn btn-success" role="button" ng-click="usersCtrl.add(usersCtrl.newUser)"><span class="glyphicon glyphicon-saved"></span></button>
 <h5 style="color: red;" class="error hide">User already exists</h5>
 
 <!-- <p class="pull-right">Search for user: <input type="text" ng-model="usersCtrl.users.user_filter" placeholder="filter..." class="pull-right"></p><br>
@@ -23,8 +23,8 @@
         <tr ng-repeat="user in usersCtrl.users | filter:usersCtrl.users.user_filter">
         <td><span ng-bind="user.first_name"></span></td>
         <td><span ng-bind="user.created_at | date: 'MMMM d yyyy'"></span></td>
-        <td><button class="btn btn-info" role="button" ng-click="usersCtrl.show(user)">Edit User</button></td>
-        <td><button class="btn btn-danger" role="button"ng-click="usersCtrl.remove(user)">Delete User</button></td>
+        <td><button class="btn btn-info" role="button" ng-click="usersCtrl.show(user)"><span class="glyphicon glyphicon-pencil"></span></button></td>
+        <td><button class="btn btn-danger" role="button"ng-click="usersCtrl.remove(user)"><span class="glyphicon glyphicon-trash"></span></button></td>
         </tr>
     </tbody>
 </table>
