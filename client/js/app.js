@@ -4,9 +4,9 @@ app.config(function($routeProvider){
 	$routeProvider
 	
 	.when('/', {
-		controller: 'OrdersController',
-		controllerAs:'ordersCtrl',
-		templateUrl: '/partials/dashboard.partial.html'
+
+		controllerAs:'loginCtrl',
+		templateUrl: '/login.html'
 	})
 	.when('/users', {
 		controller: 'UsersController',
@@ -40,6 +40,18 @@ app.config(function($routeProvider){
 		controllerAs: 'orderCtrl',
 		templateUrl: '/partials/order.partial.html'
 	})
+
 	
 	.otherwise('/')
-})
+});
+app.controller('loginCtrl',function($scope,$location){
+    $scope.submit = function () {
+        var uname = $scope.username;
+        var password = $scope.password;
+        if($scope.username == 'd' && $scope.password == 'd'){
+            $location.path('/orders');
+        }
+
+    };
+});
+
