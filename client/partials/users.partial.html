@@ -1,8 +1,5 @@
 <br>
 <div class="col-md-8">
-<input ng-model="usersCtrl.newUser.first_name" require>
-<button class="btn btn-success" role="button" ng-click="usersCtrl.add(usersCtrl.newUser)"><span class="glyphicon glyphicon-saved"></span></button>
-<h5 style="color: red;" class="error hide">User already exists</h5>
 
 <!-- <p class="pull-right">Search for user: <input type="text" ng-model="usersCtrl.users.user_filter" placeholder="filter..." class="pull-right"></p><br>
 <li ng-repeat="user in usersCtrl.users | filter:usersCtrl.users.user_filter">
@@ -14,10 +11,54 @@
         function sweetalertclick1(){
             swal("Delete Successfull!", "", "success");
         }
+        function sweetalertclick2(){
+            swal("Customer added Successfully!", "", "success");
+        }
     </script>
-<p class="pull-right">Find User: <input type="text" ng-model="usersCtrl.users.user_filter" placeholder="filter..."></p><br>
-<table class = "table; bg-success" style="width: 900px">
 
+    <button class="pull-right ; btn btn-danger" role="button" id="myBtn"><span class="glyphicon glyphicon-plus"></button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input ng-model="usersCtrl.newUser.first_name" require>
+            <button onclick="sweetalertclick2()" class="btn btn-success" role="button" ng-click="usersCtrl.add(usersCtrl.newUser)"><span class="glyphicon glyphicon-saved"></span></button>
+            <h5 style="color: red;" class="error hide">User already exists</h5>
+    </div>
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<br><br>
+<p>Find User: <input type="text" ng-model="usersCtrl.users.user_filter" placeholder="filter..."></p><br>
+<table class = "table; bg-success" style="width: 900px">
+    <br><br>
     <thead>
         <tr>
             <th>Customer Name</th>
