@@ -16,13 +16,26 @@
         }
     </script>
 
-    <button class="pull-right ; btn btn-danger" role="button" id="myBtn"><span class="glyphicon glyphicon-plus"></button>
+    <button class="pull-right; btn btn-danger" role="button" id="myBtn"><span class="glyphicon glyphicon-plus"></button>
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
+            <h4>ADD NEW CUSTOMER</h4>
+            <br><br><br>
+            Customer Name:
             <input ng-model="usersCtrl.newUser.first_name" require>
+            <br><br>
+            Customer ID:
+            <input>
+            <br><br>
+            Customer Address:
+            <input>
+            <br><br>
+            Customer TP:
+            <input>
+            <br><br><br><br><br>
             <button onclick="sweetalertclick2()" class="btn btn-success" role="button" ng-click="usersCtrl.add(usersCtrl.newUser)"><span class="glyphicon glyphicon-saved"></span></button>
             <h5 style="color: red;" class="error hide">User already exists</h5>
     </div>
@@ -69,8 +82,8 @@
         <tr ng-repeat="user in usersCtrl.users | filter:usersCtrl.users.user_filter">
         <td><span ng-bind="user.first_name"></span></td>
         <td><span ng-bind="user.created_at | date: 'MMMM d yyyy'"></span></td>
-        <td><button class="btn btn-info" role="button" ng-click="usersCtrl.show(user)">Edit User</button></td>
-        <td><button onclick="sweetalertclick1()" class="btn btn-danger" role="button"ng-click="usersCtrl.remove(user)">Delete User</button></td>
+        <td><button class="btn btn-info" role="button" ng-click="usersCtrl.show(user)"><span class="glyphicon glyphicon-pencil"></button></td>
+        <td><button onclick="sweetalertclick1()" class="btn btn-danger" role="button"ng-click="usersCtrl.remove(user)"><span class="glyphicon glyphicon-trash"></button></td>
         </tr>
     </tbody>
 </table>
