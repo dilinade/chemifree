@@ -2,11 +2,6 @@ module.exports = function(app) {
   	var users = require('../controllers/users.js');
   	var products = require('../controllers/products.js');
   	var orders = require('../controllers/orders.js');
-<<<<<<<<< Temporary merge branch 1
-=========
-
->>>>>>>>> Temporary merge branch 2
-
 
 	app
 
